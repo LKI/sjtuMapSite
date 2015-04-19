@@ -5,3 +5,18 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+.bg-miaomen {
+    background-image: url(imgs/miaomen.jpg);
+    background-repeat: no-repeat;
+}
+.bg-niaoren {
+    background-image: url(imgs/niaoren.jpg);
+    background-repeat: no-repeat;
+}
+.bg-tuoxiemen {
+    background-image: url(imgs/tuoxiemen.jpg);
+    background-repeat: no-repeat;
+}
+.wf {
+    color:white;
+}
