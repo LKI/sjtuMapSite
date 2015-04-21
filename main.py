@@ -11,6 +11,12 @@ from tornado.options import define, options
 
 define("port", default=8888, help="run on the given port", type=int)
 
+def db_exec(sql, value):
+    cx = s.connect("sqlite.db")
+    cu = cx.cursor()
+    cu.execute(sql, value)
+    return cu.fetchone()
+
 class MainPageHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("index.html");
@@ -21,11 +27,8 @@ class ContactHandler(tornado.web.RequestHandler):
 
 class PlaceHandler(tornado.web.RequestHandler):
     def get(self, pathname):
-        cx = s.connect("sqlite.db")
-        cu = cx.cursor()
         select_sql = "select name from place where url = ?"
-        cu.execute(select_sql, [pathname])
-        name = cu.fetchone()
+        name = db_exec(select_sql, [pathname])
         if name:
             self.render("place.html", path=pathname, name=name[0])
         else:
