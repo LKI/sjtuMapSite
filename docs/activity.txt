@@ -1,0 +1,21 @@
+@startuml
+
+title 交大地图 - 简明流程图
+
+start
+
+:打开地图;
+
+:选择地点;
+
+if (留言？) then (是)
+  :记录留言;
+else (否)
+  :继续浏览;
+endif
+
+:关闭地图;
+
+stop
+
+@enduml
