@@ -1,0 +1,19 @@
+@startuml
+
+title 交大地图 - 系统功能图
+
+start
+
+:用户访问;
+
+:展示地图;
+
+:呈现故事;
+
+if (用户留言?) then (是)
+    :记录留言;
+endif
+
+stop
+
+@enduml
