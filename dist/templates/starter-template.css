@@ -18,6 +18,10 @@ body {
     background-image: url(imgs/tuoxiemen.jpg);
     background-repeat: no-repeat;
 }
+.bg-dianyuandacaoping {
+    background-image: url(imgs/dianyuandacaoping.jpg);
+    background-repeat: no-repeat;
+}
 
 .wf {
     color:white;
@@ -32,4 +36,8 @@ body {
 }
 .msg-brd {
   float: left;
+}
+
+.isHidden {
+  visibility: hidden;
 }

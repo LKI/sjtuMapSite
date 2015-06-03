@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script type="text/javascript">
+    function showForm() {
+      var f = document.getElementById("comment");
+      f.style.visibility = 'visible';
+    }
+  </script>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +15,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>{{name}}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{static_url('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -27,6 +33,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
+<!-- Modal -->
+<div class="modal fade" id="comment" class="isHidden">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">"hey"</div>
+    </div>
+  </div>
+</div>
 
   <body class="bg-{{path}}">
 
@@ -54,9 +69,10 @@
     <div class="container">
       <div class="starter-template">
       </div>
-      <div class="dia-box">
+      <div class="dia-box" id="diaBox">
         <img src="{{static_url('avatars/doge.jpg')}}" class="avt-img">
-        <h1 class"wf msg-brd">你好，初次见面，请多指教。</h1>
+        <h1 class"wf msg-brd">你好，初次见面，请多指教。<br>
+        </h1>
       </div>
     </div><!-- /.container -->
 
